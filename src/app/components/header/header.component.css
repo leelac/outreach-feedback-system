@@ -1,0 +1,32 @@
+.header {
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.header img{
+    height: 50px;
+}
+
+.header .header-text{
+    font-size: 20px;
+    color: black;
+    float: right;
+    padding-top: 10px;
+    padding-right: 100px;
+    text-align: center;
+}
+
+.logout{
+    color: black;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.logout a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

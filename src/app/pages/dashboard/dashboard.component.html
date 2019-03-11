@@ -1,0 +1,94 @@
+<app-header></app-header>
+<section>
+  <app-left-navigator></app-left-navigator>
+  <article>
+    <div class="top-body">
+        <span class="row">
+            <label>Country:</label>
+      <select name="country" class="inputBox">
+                <option value disabled selected>Select Country</option>                
+            </select>
+        </span>
+        <span class="row">
+            <label>State:</label>
+      <select name="state" class="inputBox">
+                <option value="">Select State</option>
+            </select>
+        </span>
+    <span class="row">
+            <label>City:</label>
+      <select name="city" class="inputBox">
+                <option value="">Select City</option>
+            </select>
+        </span>
+        <span class="row">
+            <label>Event:</label>
+      <select name="event" class="inputBox">
+                <option value="">Select Event</option>
+            </select>
+        </span>
+    </div>
+  <div class="employee-feedback">
+    <div class="top-section total-employees">
+      <label>Total employess</label>
+      <div class="count-section">
+        <p>40</p>
+      </div>
+    </div>
+    <div class="top-section">
+      <label>Feedback provided</label>
+      <div class="count-section">
+        <p>30</p>
+      </div>
+    </div>
+    <div class="top-section">
+      <label>Average</label>
+      <div class="count-section">
+        <p>4</p>
+      </div>
+    </div>
+  </div>
+  <div class="line-divider"></div>
+  <div class="reports-section">
+        <span class="row">
+            <label>Project:</label>
+      <select name="country" class="inputBox">
+                <option value disabled selected>Select Project</option>                
+            </select>
+        </span>
+        <span class="row">
+            <label>Start date:</label>
+      <select name="state" class="inputBox">
+                <option value="">Select start date</option>
+            </select>
+        </span>
+    <span class="row">
+            <label>End date:</label>
+      <select name="city" class="inputBox">
+                <option value="">Select end date</option>
+            </select>
+        </span>       
+    </div>
+  <div class="reports-section">
+        <span class="row">
+            <label><b>Country:</b></label>
+      <span> India</span>
+        </span>
+        <span class="row">
+            <label><b>State:</b></label>
+      <span> Tamilnadu</span>
+        </span>
+    <span class="row">
+            <label><b>City:</b></label>
+      <span> Chennai</span>
+        </span>       
+    </div>
+  <div class="reports-graph">
+    <fusioncharts
+        [chartConfig]=chartConfig
+        [dataSource]=dataSource >
+    </fusioncharts>
+  </div>
+  </article>
+</section>
+<app-footer></app-footer>
