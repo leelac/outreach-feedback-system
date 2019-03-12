@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+	<style>
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+		.center-body{
+			background-color: #e6f1f2;
+		}
+		.left-nav{
+			border-right: #bdbdbd 2px solid;
+			border-radius: 0px;
+		}
+		.left-nav, .left-nav a{
+			font-weight: 500;
+			color: black;
+		}		
+		.center-body .nav-pills .nav-link.active{
+			background-image: linear-gradient(rgb(222, 238, 244), rgb(129, 209, 239));
+			color: black;
+		}
+		.header, .footer{
+			background-image: linear-gradient(rgb(222, 238, 244), rgb(129, 209, 239));
+		}		
+		.dashboard .d-flex label{
+			width: 45%;
+		}
+		.count-section{
+			line-height: 50px;
+			border: #bdbdbd 1px solid;
+			border-radius: 4px;
+			height: 85%;
+			width: 75%;
+			margin-top: 10px;
+			text-align: center;
+			background-color: #ffffff;
+		}
+		.count-section p {
+		  margin-top: 25px;
+		}
+		.line-divider{
+			border: #bdbdbd 1px solid;
+			border-radius: 4px;
+			width: 75%;
+		}		
+	</style>
+  </head>
+  <body>
+    <div class="row grow w-100 header">
+		<div class="d-flex w-100">
+			<div class="mr-auto ml-3 p-2"><img src="C:\\Users\\310077\\Desktop\\HackFSE\\logo-transperant.png" alt="Cognizant Outreach" class="rounded"></div>
+			<div class="pt-3 pr-3"><b>Hi Mrs. Leela</b></div>
+			<div class="pt-3 pr-3"><a href="#" title="logout">Logout</a></div>
+		</div>		
+	</div>
+	<div class="row w-100">		
+		<div class="d-flex col-12 py-3 center-body row-divided">
+			<div class="mr-auto nav col-2 flex-column nav-pills left-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			  <a class="nav-link active" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true">Dashboard</a>
+			  <a class="nav-link" id="v-pills-uploaddata-tab" data-toggle="pill" href="#v-pills-uploaddata" role="tab" aria-controls="v-pills-uploaddata" aria-selected="false">Upload data</a>
+			  <a class="nav-link" id="v-pills-events-tab" data-toggle="pill" href="#v-pills-events" role="tab" aria-controls="v-pills-events" aria-selected="false">Events</a>
+			  <a class="nav-link" id="v-pills-eevents-tab" data-toggle="pill" href="#v-pills-eevents" role="tab" aria-controls="v-pills-eevents" aria-selected="false">Employee events</a>
+			  <a class="nav-link" id="v-pills-updatefeedback-tab" data-toggle="pill" href="#v-pills-updatefeedback" role="tab" aria-controls="v-pills-updatefeedback" aria-selected="false">Update feedback</a>
+			  <a class="nav-link" id="v-pills-croles-tab" data-toggle="pill" href="#v-pills-croles" role="tab" aria-controls="v-pills-croles" aria-selected="false">Configure roles</a>
+			</div>
+			<div class="tab-content col-10" id="v-pills-tabContent">
+			  <div class="tab-pane fade show active dashboard ml-3" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+				<h2 class="pb-2">Reports & Dashboard</h1>
+				<div class="line-divider mt-3 mb-3"></div>
+				<div class="form-group row">
+					<div class="col-2">
+					  <label for="sel1" class="pt-1">Country :</label>
+					  <select class="form-control" id="sel1">
+						<option>--Select--</option>
+						<option>1</option>
+						<option>2</option>
+						<option>2</option>
+					  </select>      
+					</div>
+					<div class="col-2">
+					  <label for="sel11" class="pt-1">State :</label>
+					  <select class="form-control" id="sel11">
+						<option>--Select--</option>
+						<option>1</option>
+						<option>2</option>
+						<option>2</option>
+					  </select>      
+					</div>
+					<div class="col-2">
+					  <label for="sel12" class="pt-1">City :</label>
+					  <select class="form-control" id="sel12">
+						<option>--Select--</option>
+						<option>1</option>
+						<option>2</option>
+						<option>2</option>
+					  </select>      
+					</div>
+					<div class="col-2">
+					  <label for="sel13" class="pt-1">Event :</label>
+					  <select class="form-control" id="sel13">
+						<option>--Select--</option>
+						<option>1</option>
+						<option>2</option>
+						<option>2</option>
+					  </select>      
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-2">
+						<label>Total employees</label>
+						<div class="count-section">
+							<p>40</p>
+						</div>
+					</div>
+					<div class="col-2">
+						<label>Feedback provided</label>
+						<div class="count-section">
+							<p>30</p>
+						</div>
+					</div>
+					<div class="col-2">
+						<label>Average score</label>
+						<div class="count-section">
+							<p>4</p>
+						</div>
+					</div>
+				</div>
+				<div class="line-divider mt-5"></div>
+				<div class="form-group row mt-3">
+					<div class="col-2">
+					  <label for="sel1" class="pt-1">Project :</label>
+					  <select class="form-control" id="sel1">
+						<option>--Select--</option>
+						<option>1</option>
+						<option>2</option>
+						<option>2</option>
+					  </select>      
+					</div>
+					<div class="col-2">
+					  <label for="sel11" class="pt-1">Start date :</label>
+					  <select class="form-control" id="sel11">
+						<option>--Select--</option>
+						<option>1</option>
+						<option>2</option>
+						<option>2</option>
+					  </select>      
+					</div>
+					<div class="col-2">
+					  <label for="sel12" class="pt-1">End date :</label>
+					  <select class="form-control" id="sel12">
+						<option>--Select--</option>
+						<option>1</option>
+						<option>2</option>
+						<option>2</option>
+					  </select>      
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-2">
+						<label><b>Country:</b></label>
+						<span> India</span>
+					</div>
+					<div class="col-2">
+						<label><b>State:</b></label>
+						<span> Tamilnadu</span>
+					</div>
+					<div class="col-2">
+						<label><b>City:</b></label>
+						<span> Chennai</span>
+					</div>
+				</div>
+				<div class="row mt-4 ml-2">
+					<span>
+						<img src="C:\\Users\\310077\\Desktop\\HackFSE\\graph.jpg" alt="graph">
+					</span> 
+				</div>
+			  </div>
+			  <div class="tab-pane fade" id="v-pills-uploaddata" role="tabpanel" aria-labelledby="v-pills-uploaddata-tab">...</div>
+			  <div class="tab-pane fade" id="v-pills-events" role="tabpanel" aria-labelledby="v-pills-events-tab">...</div>
+			  <div class="tab-pane fade" id="v-pills-eevents" role="tabpanel" aria-labelledby="v-pills-eevents-tab">...</div>
+			  <div class="tab-pane fade" id="v-pills-updatefeedback" role="tabpanel" aria-labelledby="v-pills-updatefeedback-tab">...</div>
+			  <div class="tab-pane fade" id="v-pills-croles" role="tabpanel" aria-labelledby="v-pills-croles-tab">...</div>
+			</div>
+		</div>		
+	</div>
+	<div class="row w-100 footer">
+		<div class="col-12 py-3 text-center">
+			Footer
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
