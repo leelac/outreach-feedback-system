@@ -1,94 +1,143 @@
 <app-header></app-header>
-<section>
-  <app-left-navigator></app-left-navigator>
-  <article>
-    <div class="top-body">
-        <span class="row">
-            <label>Country:</label>
-      <select name="country" class="inputBox">
-                <option value disabled selected>Select Country</option>                
-            </select>
-        </span>
-        <span class="row">
-            <label>State:</label>
-      <select name="state" class="inputBox">
-                <option value="">Select State</option>
-            </select>
-        </span>
-    <span class="row">
-            <label>City:</label>
-      <select name="city" class="inputBox">
-                <option value="">Select City</option>
-            </select>
-        </span>
-        <span class="row">
-            <label>Event:</label>
-      <select name="event" class="inputBox">
-                <option value="">Select Event</option>
-            </select>
-        </span>
-    </div>
-  <div class="employee-feedback">
-    <div class="top-section total-employees">
-      <label>Total employess</label>
-      <div class="count-section">
-        <p>40</p>
-      </div>
-    </div>
-    <div class="top-section">
-      <label>Feedback provided</label>
-      <div class="count-section">
-        <p>30</p>
-      </div>
-    </div>
-    <div class="top-section">
-      <label>Average</label>
-      <div class="count-section">
-        <p>4</p>
-      </div>
-    </div>
-  </div>
-  <div class="line-divider"></div>
-  <div class="reports-section">
-        <span class="row">
-            <label>Project:</label>
-      <select name="country" class="inputBox">
-                <option value disabled selected>Select Project</option>                
-            </select>
-        </span>
-        <span class="row">
-            <label>Start date:</label>
-      <select name="state" class="inputBox">
-                <option value="">Select start date</option>
-            </select>
-        </span>
-    <span class="row">
-            <label>End date:</label>
-      <select name="city" class="inputBox">
-                <option value="">Select end date</option>
-            </select>
-        </span>       
-    </div>
-  <div class="reports-section">
-        <span class="row">
-            <label><b>Country:</b></label>
-      <span> India</span>
-        </span>
-        <span class="row">
-            <label><b>State:</b></label>
-      <span> Tamilnadu</span>
-        </span>
-    <span class="row">
-            <label><b>City:</b></label>
-      <span> Chennai</span>
-        </span>       
-    </div>
-  <div class="reports-graph">
-    <fusioncharts
-        [chartConfig]=chartConfig
-        [dataSource]=dataSource >
-    </fusioncharts>
-  </div>
-  </article>
-</section>
+<div class="row w-100">		
+    <div class="d-flex col-12 py-3 center-body row-divided">
+        <div class="mr-auto nav col-2 flex-column nav-pills left-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true">Dashboard</a>
+            <a class="nav-link" id="v-pills-uploaddata-tab" data-toggle="pill" href="#v-pills-uploaddata" role="tab" aria-controls="v-pills-uploaddata" aria-selected="false">Upload data</a>
+            <a class="nav-link" id="v-pills-events-tab" data-toggle="pill" href="#v-pills-events" role="tab" aria-controls="v-pills-events" aria-selected="false">Events</a>
+            <a class="nav-link" id="v-pills-eevents-tab" data-toggle="pill" href="#v-pills-eevents" role="tab" aria-controls="v-pills-eevents" aria-selected="false">Employee events</a>
+            <a class="nav-link" id="v-pills-updatefeedback-tab" data-toggle="pill" href="#v-pills-updatefeedback" role="tab" aria-controls="v-pills-updatefeedback" aria-selected="false">Update feedback</a>
+            <a class="nav-link" id="v-pills-croles-tab" data-toggle="pill" href="#v-pills-croles" role="tab" aria-controls="v-pills-croles" aria-selected="false">Configure roles</a>
+        </div>
+        <div class="tab-content col-10" id="v-pills-tabContent">
+          <div class="tab-pane fade show active dashboard ml-3" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+            <h2 class="pb-2">Reports & Dashboard</h2>
+            <div class="line-divider mt-3 mb-3"></div>
+            <div class="form-group row">
+                <div class="col-2">
+                  <label for="sel1" class="pt-1">Country :</label>
+                  <select class="form-control" id="sel1">
+                    <option>--Select--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>2</option>
+                  </select>      
+                </div>
+                <div class="col-2">
+                  <label for="sel11" class="pt-1">State :</label>
+                  <select class="form-control" id="sel11">
+                    <option>--Select--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>2</option>
+                  </select>      
+                </div>
+                <div class="col-2">
+                  <label for="sel12" class="pt-1">City :</label>
+                  <select class="form-control" id="sel12">
+                    <option>--Select--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>2</option>
+                  </select>      
+                </div>
+                <div class="col-2">
+                  <label for="sel13" class="pt-1">Event :</label>
+                  <select class="form-control" id="sel13">
+                    <option>--Select--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>2</option>
+                  </select>      
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-2">
+                    <label class="pb-2">Total employees</label>
+                </div>
+                <div class="col-2">
+                    <label class="pb-2">Feedback provided</label>
+                </div>
+                <div class="col-2">
+                    <label class="pb-2">Average score</label>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-2">
+                    <div class="count-section">
+                        <p>40</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="count-section">
+                        <p>30</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="count-section">
+                        <p>4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="line-divider mt-5"></div>
+            <div class="form-group row mt-3">
+                <div class="col-2">
+                  <label for="sel1" class="pt-1">Project :</label>
+                  <select class="form-control" id="sel1">
+                    <option>--Select--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>2</option>
+                  </select>      
+                </div>
+                <div class="col-2">
+                  <label for="sel11" class="pt-1">Start date :</label>
+                  <select class="form-control" id="sel11">
+                    <option>--Select--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>2</option>
+                  </select>      
+                </div>
+                <div class="col-2">
+                  <label for="sel12" class="pt-1">End date :</label>
+                  <select class="form-control" id="sel12">
+                    <option>--Select--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>2</option>
+                  </select>      
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-3">
+                    <label><b>Country:</b></label>
+                    <span> India</span>
+                </div>
+                <div class="col-3">
+                    <label><b>State:</b></label>
+                    <span> Tamilnadu</span>
+                </div>
+                <div class="col-3">
+                    <label><b>City:</b></label>
+                    <span> Chennai</span>
+                </div>
+            </div>
+            <div class="row mt-4 ml-2">
+                <div class="reports-graph">
+                    <fusioncharts
+                        [chartConfig]=chartConfig
+                        [dataSource]=dataSource >
+                    </fusioncharts>
+                  </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-uploaddata" role="tabpanel" aria-labelledby="v-pills-uploaddata-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-events" role="tabpanel" aria-labelledby="v-pills-events-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-eevents" role="tabpanel" aria-labelledby="v-pills-eevents-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-updatefeedback" role="tabpanel" aria-labelledby="v-pills-updatefeedback-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-croles" role="tabpanel" aria-labelledby="v-pills-croles-tab">...</div>
+        </div>
+    </div>		
+</div>
 <app-footer></app-footer>

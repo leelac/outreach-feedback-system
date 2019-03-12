@@ -1,90 +1,34 @@
-@media (max-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
-    }
+.center-body{
+    background-color: #e6f1f2;
 }
-
-* {
-    box-sizing: border-box;
+.left-nav{
+    border-right: #bdbdbd 2px solid;
+    border-radius: 0px;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-section:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-a {
+.left-nav, .left-nav a{
+    font-weight: 500;
     color: black;
-    text-decoration: none;
+}		
+.center-body .nav-pills .nav-link.active{
+    background-image: linear-gradient(rgb(222, 238, 244), rgb(129, 209, 239));
+    color: black;
+}	
+.dashboard .d-flex label{
+    width: 45%;
 }
-
-article {
-    float: left;
-    padding: 20px;
-    width: 80%;
-    height: 80%; /* only for demonstration, should be removed */
-}
-.top-body, .employee-feedback .reports-section .reports-graph{
-    margin: 2px 0px;
-    padding: 40px;
-}
-.employee-feedback{
-    margin: 2px 0px;
-    padding-left: 40px;
-	padding-top: 5px;
-}
-.employee-feedback .top-section{
-	float: left;
-	padding-left: 40px;
-	width: 190px;
-}
-.top-section .count-section{
-	line-height: 50px;
-	border: #bdbdbd 1px solid;
-    border-radius: 4px;
-	height: 100px;
-	margin-top: 10px;
-	text-align: center;
-}
-.top-section .count-section p {
-  display: inline-block;
-  vertical-align: middle;
-}
-.employee-feedback .total-employees{
-	float: left;
-	padding-left: 0px;
-	width: 150px;
-}
-.inputBox {
-    padding: 10px;
+.count-section{
+    line-height: 50px;
     border: #bdbdbd 1px solid;
     border-radius: 4px;
-    background-color: #FFF;   
+    margin-top: 10px;
+    text-align: center;
+    background-color: #ffffff;
 }
-.row {
-    padding-bottom: 15px;
-	padding-right: 10px;
-}
-.row select{
-    width: 150px;
+.count-section p {
+  margin-top: 25px;
 }
 .line-divider{
-	border: #bdbdbd 1px solid;
+    border: #bdbdbd 1px solid;
     border-radius: 4px;
-	margin-top: 150px;
-	width: 60%;
-}
-.reports-section{
-	margin-top: 30px;
-	padding-left: 40px;
-}
-.reports-graph{
-	margin-top: 30px;
-	padding-left: 40px;
+    width: 100%;
 }
