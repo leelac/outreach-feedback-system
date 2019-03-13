@@ -4,15 +4,11 @@
 .left-nav{
     border-right: #bdbdbd 2px solid;
     border-radius: 0px;
-}
-.left-nav, .left-nav a{
-    font-weight: 500;
-    color: black;
-}		
+}	
 .center-body .nav-pills .nav-link.active{
     background-image: linear-gradient(rgb(222, 238, 244), rgb(129, 209, 239));
     color: black;
-}	
+}
 .dashboard .d-flex label{
     width: 45%;
 }
