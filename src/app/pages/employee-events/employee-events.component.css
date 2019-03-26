@@ -9,28 +9,11 @@
     background-image: linear-gradient(rgb(222, 238, 244), rgb(129, 209, 239));
     color: black;
 }
-.dashboard .d-flex label{
-    width: 45%;
-}
-.count-section{
-    line-height: 50px;
-    border: #bdbdbd 1px solid;
-    border-radius: 4px;
-    margin-top: 10px;
-    text-align: center;
-    background-color: #ffffff;
-}
-.count-section p {
-  margin-top: 25px;
-}
 .line-divider{
     border: #bdbdbd 1px solid;
     border-radius: 4px;
     width: 100%;
 }
-.datepickercss{
-    border: 2px solid;
-}
-.refreshbutton{
+.downloadrows{
     background-color: #81d1ef;
 }

@@ -9,6 +9,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LeftNavigatorComponent } from './components/left-navigator/left-navigator.component';
 
+import {HttpClientModule} from "@angular/common/http";
+import { AddressesService } from './services/addresses.service';
+
 // Load FusionCharts
 import * as FusionCharts from 'fusioncharts';
 // Load Charts module
@@ -19,20 +22,34 @@ import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 // Add dependencies to FusionChartsModule
 FusionChartsModule.fcRoot(FusionCharts, Charts, FusionTheme)
 
+import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
+import { EmployeeEventsComponent } from './pages/employee-events/employee-events.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { ChildMessageComponent } from './pages/employee-events/send-email.module';
+import { AddressSelectorComponent } from './components/address-selector/address-selector.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    LeftNavigatorComponent
+    LeftNavigatorComponent,
+    EmployeeEventsComponent,
+    ChildMessageComponent,
+    AddressSelectorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FusionChartsModule
+    FusionChartsModule,
+    HttpClientModule,
+    DatePickerModule, 
+    AgGridModule.withComponents([
+      ChildMessageComponent
+    ])
   ],
-  providers: [],
+  providers: [AddressesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

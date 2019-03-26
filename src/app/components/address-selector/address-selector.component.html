@@ -1,0 +1,34 @@
+<div class="form-group row col-10">
+  <div class="col-2">
+    <label for="sel1" class="pt-1">Country :</label>
+    <select class="form-control" id="sel1" (change)="populateCities($event.target.value)">
+      <option>--Select--</option>
+      <option [value]="country.name" *ngFor="let country of countries">{{country.name}}</option>
+    </select>      
+  </div>
+  <div class="col-2">
+    <label for="sel11" class="pt-1">State :</label>
+    <select class="form-control" id="sel11">
+      <option>--Select--</option>
+      <option [value]="city.name" *ngFor="let city of cities">{{city.name}}</option>
+    </select>      
+  </div>
+  <div class="col-2">
+    <label for="sel12" class="pt-1">City :</label>
+    <select class="form-control" id="sel12">
+      <option>--Select--</option>
+      <option>1</option>
+      <option>2</option>
+      <option>2</option>
+    </select>      
+  </div>
+  <div class="col-2">
+    <label for="sel13" class="pt-1">Beneficiary :</label>
+    <select class="form-control" id="sel13" (change)="refreshData($event.target.value)">
+      <option>--Select--</option>
+      <option>1</option>
+      <option>2</option>
+      <option>2</option>
+    </select>      
+  </div>
+</div>

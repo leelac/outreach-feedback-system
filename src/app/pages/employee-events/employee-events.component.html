@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="row w-100">		
+    <div class="d-flex col-12 py-3 center-body row-divided">
+        <div class="mr-auto col-2 p-2 left-nav">
+            <app-left-navigator></app-left-navigator>
+        </div>
+        <div class="tab-content col-10">
+          <div class="tab-pane fade show active dashboard ml-3" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+            <h2 class="pb-2">Employee events</h2>
+            <div class="line-divider mt-3 mb-3"></div>
+            <app-address-selector (refreshDataEvent)="refreshData($event)"></app-address-selector>
+            <div class="form-group row">
+              <div class="col-10">
+                <ag-grid-angular 
+                    #agGrid
+                    style="width: 92%; height: 100%;"
+                    id="myGrid"
+                    class="ag-theme-balham"
+                    [columnDefs]="columnDefs"
+                    [defaultColDef]="defaultColDef"
+                    [suppressRowClickSelection]="true"
+                    [rowSelection]="rowSelection"
+                    [rowData]="rowData"
+                    [pagination]="true"
+                    [paginationPageSize]="paginationPageSize"
+                    (gridReady)="onGridReady($event)">
+                </ag-grid-angular>
+              </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <button (click)="onBtExport()" class="btn downloadrows">Download Selected Rows</button>
+                </div>                
+              </div>
+          </div>          
+        </div>
+    </div>		
+</div>
+<app-footer></app-footer>

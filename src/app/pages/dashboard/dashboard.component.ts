@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   dataSource: Object;
-  chartConfig: Object;
+  chartConfig: Object;  
+  public minDate: Date = new Date(2019, 3, 7);
+  public maxDate: Date = new Date(2019, 4, 27)
 
   constructor() {
     this.chartConfig = {
@@ -23,7 +26,20 @@ export class DashboardComponent implements OnInit {
       "chart": {
         "xAxisName": "Month",
         "yAxisName": "Feedback",
-        "theme": "gammel",
+        "theme": "fusion",
+        "palettecolors":"#81d1ef",
+        "usePlotGradientColor": "1",
+        "plotGradientColor":"#deeef4",
+        "bgColor": "#e6f1f2",
+        "bgAlpha": "50",
+        "labelDisplay": "rotate",
+        "slantLabel": "1",
+        "labelFontBold":"1",
+        "labelFont": "Arial",
+        "baseFont": "Arial",
+        "baseFontSize": "14",
+        "outCnvBaseFont": "Arial",
+        "outCnvBaseFontSize": "14"
       },
       "data": [{
         "label": "January",
@@ -63,13 +79,18 @@ export class DashboardComponent implements OnInit {
         "value": "4"
       }]
     };
-
-    
    }
 
+   ngOnInit() {     
+  }
 
-   
-  ngOnInit() {
+  refreshChart(startDate: any, endDate: any){
+    var datePipe = new DatePipe("en-US");
+    console.log("Stardate:" + datePipe.transform(startDate, 'dd-MM-yyyy'));
+  }
+
+  refreshData(data) {
+    console.log("as"+data);
   }
 
 }

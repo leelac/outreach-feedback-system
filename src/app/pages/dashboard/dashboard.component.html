@@ -8,44 +8,7 @@
           <div class="tab-pane fade show active dashboard ml-3" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
             <h2 class="pb-2">Reports & Dashboard</h2>
             <div class="line-divider mt-3 mb-3"></div>
-            <div class="form-group row">
-                <div class="col-2">
-                  <label for="sel1" class="pt-1">Country :</label>
-                  <select class="form-control" id="sel1">
-                    <option>--Select--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>2</option>
-                  </select>      
-                </div>
-                <div class="col-2">
-                  <label for="sel11" class="pt-1">State :</label>
-                  <select class="form-control" id="sel11">
-                    <option>--Select--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>2</option>
-                  </select>      
-                </div>
-                <div class="col-2">
-                  <label for="sel12" class="pt-1">City :</label>
-                  <select class="form-control" id="sel12">
-                    <option>--Select--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>2</option>
-                  </select>      
-                </div>
-                <div class="col-2">
-                  <label for="sel13" class="pt-1">Event :</label>
-                  <select class="form-control" id="sel13">
-                    <option>--Select--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>2</option>
-                  </select>      
-                </div>
-            </div>
+            <app-address-selector (refreshDataEvent)="refreshData($event)"></app-address-selector>
             <div class="row mt-4">
                 <div class="col-2">
                     <label class="pb-2">Total employees</label>
@@ -73,58 +36,27 @@
                         <p>4</p>
                     </div>
                 </div>
-            </div>
-            <div class="line-divider mt-5"></div>
-            <div class="form-group row mt-3">
+            </div>            
+            <div class="row mt-4 form-group">           
                 <div class="col-2">
-                  <label for="sel1" class="pt-1">Project :</label>
-                  <select class="form-control" id="sel1">
-                    <option>--Select--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>2</option>
-                  </select>      
-                </div>
+                    <label class="pb-2">Start date</label>
+                    <ejs-datepicker id='datepickerstartdate' #datepickerstartdate placeholder='Select a start date' [min]='minDate' [max]='maxDate' format='dd-MMM-yy'></ejs-datepicker>
+                </div> 
                 <div class="col-2">
-                  <label for="sel11" class="pt-1">Start date :</label>
-                  <select class="form-control" id="sel11">
-                    <option>--Select--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>2</option>
-                  </select>      
-                </div>
-                <div class="col-2">
-                  <label for="sel12" class="pt-1">End date :</label>
-                  <select class="form-control" id="sel12">
-                    <option>--Select--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>2</option>
-                  </select>      
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-3">
-                    <label><b>Country:</b></label>
-                    <span> India</span>
-                </div>
-                <div class="col-3">
-                    <label><b>State:</b></label>
-                    <span> Tamilnadu</span>
-                </div>
-                <div class="col-3">
-                    <label><b>City:</b></label>
-                    <span> Chennai</span>
-                </div>
-            </div>
+                    <label class="pb-2">End date</label>
+                    <ejs-datepicker id='datepickerenddate' #datepickerenddate placeholder='Select a end date' [value]='value' [min]='minDate' [max]='maxDate'></ejs-datepicker>
+                </div>  
+                <div class="col-2 mt-3">
+                    <button (click)="refreshChart(datepickerstartdate.value, datepickerenddate.value)" class="btn refreshbutton">Refresh</button>  
+                </div>           
+            </div>            
             <div class="row mt-4 ml-2">
-                <div class="reports-graph">
-                    <fusioncharts
-                        [chartConfig]=chartConfig
-                        [dataSource]=dataSource >
-                    </fusioncharts>
-                  </div>
+                    <div class="reports-graph">
+                        <fusioncharts
+                            [chartConfig]=chartConfig
+                            [dataSource]=dataSource >
+                        </fusioncharts>
+                      </div>
             </div>
           </div>          
         </div>
