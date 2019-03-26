@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Notes
+ng generate component pages/dashboard
+ng generate component components/header
+ng generate component components/footer
+ng generate component components/left-navigator
+
+ng g component components/address-selector
+
+npm install angular-fusioncharts --save
+npm install fusioncharts --save
+
+npm install @syncfusion/ej2-angular-calendars --save
+
+ng generate class models/restfulResponse --type=mode
+ng generate class models/country --type=model
+
+ng generate service services/addresses
+
+ng generate component pages/employee-events
+
+npm install --save ag-grid
+npm install --save ag-grid-community ag-grid-angular
+npm install --save ag-grid-enterprise
+
+
+ng generate module pages/employee-events/send-email --flat
