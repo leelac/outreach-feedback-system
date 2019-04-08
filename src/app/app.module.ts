@@ -27,6 +27,9 @@ import { EmployeeEventsComponent } from './pages/employee-events/employee-events
 import { AgGridModule } from 'ag-grid-angular';
 import { ChildMessageComponent } from './pages/employee-events/send-email.module';
 import { AddressSelectorComponent } from './components/address-selector/address-selector.component';
+import { FeedbackComponent } from './pages/feedback/feedback.component';
+import { FormsModule  } from '@angular/forms';
+import { FeedbackSuccessComponent } from './pages/feedback-success/feedback-success.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { AddressSelectorComponent } from './components/address-selector/address-
     LeftNavigatorComponent,
     EmployeeEventsComponent,
     ChildMessageComponent,
-    AddressSelectorComponent
+    AddressSelectorComponent,
+    FeedbackComponent,
+    FeedbackSuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +50,7 @@ import { AddressSelectorComponent } from './components/address-selector/address-
     FusionChartsModule,
     HttpClientModule,
     DatePickerModule, 
+    FormsModule,
     AgGridModule.withComponents([
       ChildMessageComponent
     ])

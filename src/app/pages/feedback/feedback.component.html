@@ -1,0 +1,25 @@
+<div class="row w-100 h-100">
+    <div class="col-12 py-3 center-body">
+      <div class="d-flex justify-content-center">
+          <h4>Thanks for providing the feedback.</h4>        
+      </div>
+      <div class="d-flex justify-content-center mt-2">
+          <h5>We would like to hear more about your experience. Please provide the below details.</h5>        
+      </div>
+      <div class="d-flex justify-content-center mt-4">
+        <form name="feedbackForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="likeActivity">What did you like about this volunteering activity?</label>
+            <textarea class="form-control rounded-0" name="likeActivity" [(ngModel)]="feedback.likeActivity" rows="3"></textarea>                    
+          </div>
+          <div *ngIf="showAdditionalQuestion" class="form-group">
+            <label for="improvedActivity">What can be improved in this volunteering activity?</label>
+            <textarea class="form-control rounded-0" rows="3" name="improvedActivity" [(ngModel)]="feedback.improvedActivity"></textarea>                 
+          </div>
+          <div class="center-block">
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
