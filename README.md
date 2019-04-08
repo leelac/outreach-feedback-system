@@ -28,23 +28,24 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Notes
 ng generate component pages/dashboard
+ng generate component pages/employee-events
+ng generate component pages/feedback
+ng generate component pages/feedback-success
+
 ng generate component components/header
 ng generate component components/footer
 ng generate component components/left-navigator
-
 ng g component components/address-selector
+
+ng generate class models/restfulResponse --type=mode
+ng generate class models/country --type=model
 
 npm install angular-fusioncharts --save
 npm install fusioncharts --save
 
 npm install @syncfusion/ej2-angular-calendars --save
 
-ng generate class models/restfulResponse --type=mode
-ng generate class models/country --type=model
-
 ng generate service services/addresses
-
-ng generate component pages/employee-events
 
 npm install --save ag-grid
 npm install --save ag-grid-community ag-grid-angular
